@@ -5,6 +5,7 @@
 }
 .main-component {
   width: 100%;
+  overflow-x: hidden;
 }
 .mid-col-box {
   border-left: 1px solid #f0f0f0;
@@ -24,7 +25,7 @@
 }
 .swiper-container {
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
   padding: 2rem;
 }
 .swiper-content {
@@ -33,7 +34,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   padding: 2rem;
-  gap: 0.5rem;
+  gap: 1rem;
   border-radius: 0.75rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   transition: 0.35s;
@@ -48,7 +49,7 @@
   color: #000;
 }
 .swiper-content h3 {
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   margin: 0;
   font-weight: 500;
   color: #000;
@@ -88,10 +89,10 @@
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .partner-logos {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1rem;
   padding: 1.5rem 2rem;
 }
 .marquee-section img {
@@ -104,6 +105,11 @@
   margin: 3rem auto;
   width: 90%;
   padding: 3rem 0;
+}
+.accordian-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .accordian-content .accordion-item {
   border: unset;
@@ -145,10 +151,23 @@
   align-items: center;
 }
 .img-acco-container img {
-  width: 100%;
+  width: 80%;
   height: auto;
   object-fit: contain;
   display: none;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 1200px) {
+  .marquee-section img {
+    width: 125px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .partner-logos {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 @media only screen and (max-width: 950px) {
   .swiper-section {
@@ -180,5 +199,25 @@
   .accordian-content .accordion-body img {
     display: flex !important;
     margin-top: 2rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .partner-logos {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .marquee-section img {
+    width: 110px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .partner-logos {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .partner-logos {
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
   }
 }
