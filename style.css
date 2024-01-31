@@ -93,10 +93,10 @@
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-gap: 1rem;
-  padding: 1.5rem 2rem;
+  padding: 2.5rem 2rem;
 }
 .marquee-section img {
-  width: 150px;
+  width: 140px;
   object-fit: contain;
   height: auto;
 }
